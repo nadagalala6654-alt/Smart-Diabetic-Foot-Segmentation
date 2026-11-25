@@ -1,15 +1,16 @@
 
-# Diabetic Wound Image Segmentation
+# Smart Diabetic Foot Segmentation
 
 ## Project Overview
-This project performs image segmentation for diabetic wound images using pre-existing masks.
+This project performs diabetic wound image segmentation using existing ground truth masks.
 
 ## Project Objectives
-- Use the available segmentation masks.
-- Generate binary masks.
-- Visualize segmentation results.
-- Generate overlay images.
-- Save segmentation outputs and reports.
+- Load wound images and their corresponding masks.
+- Match images with their masks.
+- Convert masks into binary masks.
+- Generate segmentation overlays.
+- Calculate wound area and percentage.
+- Save segmentation results and reports.
 
 ## Project Structure
 - Normal/
@@ -19,18 +20,37 @@ This project performs image segmentation for diabetic wound images using pre-exi
   - binary_masks/
   - original_images/
   - overlays/
-  - preview.png
+  - segmentation_preview.png
+  - segmentation_report.csv
 - segmentation.py
-- segmentation_report.csv
+- requirements.txt
+- README.md
+- .gitignore
 
 ## Technologies
 - Python
-- Image Processing
-- Image Segmentation
+- OpenCV
+- NumPy
+- Matplotlib
 
 ## Important Note
-This project uses existing masks only.
+This project uses existing ground truth masks only.
+
 No AI model training is performed.
 
-## Results
-The generated segmentation results are saved in the outputs folder.
+## Outputs
+- Binary Masks
+- Original Images
+- Segmentation Overlays
+- Segmentation Preview
+- CSV Segmentation Report
+
+## How to Run
+
+Install the required libraries:
+
+pip install -r requirements.txt
+
+Run the segmentation script:
+
+python segmentation.py
